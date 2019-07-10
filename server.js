@@ -1,6 +1,6 @@
 const path = require('path');
 const cookie = require('cookie');
-const fs = require('./fs.js');
+const todos_fs = require('./fs.js');
 const member = require('./member.js');
 const todos = require('./public/js/todos.js');
 const urlList = require('./url.js');
@@ -12,7 +12,7 @@ const get = async (url, req, res) => {
 
 	try {
 		if (ext) {
-			const { file, mimeType } = await fs.readFile(`${publicPath}${url}`, ext);
+			const { file, mimeType } = await todos_fs.readFile(`${publicPath}${url}`, ext);
 
 			if (!file || !mimeType) {
 				throw new Error('500');
@@ -24,7 +24,7 @@ const get = async (url, req, res) => {
 
 		if (readFileUrl(url)) {
 			const fileName = readFileUrl(url);
-			const { file, mimeType } = await fs.readFile(`${publicPath}${fileName}`, '.html');
+			const { file, mimeType } = await todos_fs.readFile(`${publicPath}${fileName}`, '.html');
 
 			if (!file || !mimeType) {
 				throw new Error('500');
