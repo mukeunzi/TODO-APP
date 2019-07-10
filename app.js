@@ -1,11 +1,7 @@
 const http = require('http');
 const myApp = require('./server.js');
 
-// heroku
-const PORT = process.env.PORT;
-
-// local
-// const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const server = http.createServer((req, res) => {
 	const method = req.method;
