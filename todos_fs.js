@@ -15,6 +15,16 @@ const readFile = (filePath, ext) => {
 	});
 };
 
+const makeDefaultDB = filePath => {
+	if (!fs.existsSync(filePath)) {
+		fs.writeFile(filePath, '', error => {
+			if (error) {
+				throw new Error(error);
+			}
+		});
+	}
+};
+
 const getMimeType = ext => {
 	if (Object.keys(mimeTypeList).includes(ext)) {
 		return mimeTypeList[ext];
@@ -22,5 +32,6 @@ const getMimeType = ext => {
 };
 
 module.exports = {
-	readFile
+	readFile,
+	makeDefaultDB
 };
