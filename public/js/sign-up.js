@@ -67,6 +67,8 @@ const isValidPassword = (password, rePassword) => {
 	if (password !== rePassword) {
 		document.querySelector('#rePassword').value = '';
 		document.querySelector('#password').focus();
+		alert('비밀번호가 올바르지 않습니다.');
+
 		return;
 	}
 	return true;
