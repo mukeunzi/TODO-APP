@@ -12,29 +12,37 @@
 
 Node.js HTTP 모듈을 사용한 TODO APP 입니다. 웹 개발에 필요한 기술과 흐름을 학습하기 위해 Express 와 Database 를 사용하지 않았습니다.
 
-## :page_facing_up: API
+## :page_with_curl: 페이지
 
 **계정**
 
 - 로그인 : `GET /auth`
-- 로그인 요청 : `POST /auth`
-- 로그아웃 : `DELETE /users`
 - 회원가입 : `GET /users`
-- 회원가입 요청 : `POST /users`
-- 접근 권한 : `GET /permission`
 
 **TODO**
 
 - TODO 메인페이지 : `GET /`
 - TODO 목록 조회 : `GET /todos`
-- TODO 목록 추가 : `POST /todo`
-- TODO 상태 변경 : `PUT /events`
-- TODO 목록 삭제 : `DELETE /todos/:todos_id`
 
 **오류**
 
 - Not Found : `GET /error-404`
 - Internal Server Error : `GET /error-500`
+
+## :page_facing_up: API
+
+**계정**
+
+- 로그인 요청 : `POST /auth`
+- 로그아웃 : `DELETE /users`
+- 회원가입 요청 : `POST /users`
+- 접근 권한 : `GET /permission`
+
+**TODO**
+
+- TODO 목록 추가 : `POST /todo`
+- TODO 상태 변경 : `PUT /events`
+- TODO 목록 삭제 : `DELETE /todos/:todos_id`
 
 ## :woman_technologist: Usage
 
