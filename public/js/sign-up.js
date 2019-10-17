@@ -1,12 +1,10 @@
-const load = () => {
-	window.addEventListener('load', () => {
-		const signUpButton = document.querySelector('#signUpButton');
+window.addEventListener('load', () => {
+	const signUpButton = document.querySelector('#signUpButton');
 
-		signUpButton.addEventListener('click', () => {
-			isValidSignUpData();
-		});
+	signUpButton.addEventListener('click', () => {
+		isValidSignUpData();
 	});
-};
+});
 
 const isValidSignUpData = () => {
 	const id = document.querySelector('#id').value;
@@ -73,5 +71,3 @@ const isValidPassword = (password, rePassword) => {
 	}
 	return true;
 };
-
-load();

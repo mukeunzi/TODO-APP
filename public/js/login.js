@@ -1,16 +1,14 @@
-const load = () => {
-	window.addEventListener('load', () => {
-		const loginButton = document.querySelector('#loginButton');
-		const signUpButton = document.querySelector('#signUpButton');
+window.addEventListener('load', () => {
+	const loginButton = document.querySelector('#loginButton');
+	const signUpButton = document.querySelector('#signUpButton');
 
-		loginButton.addEventListener('click', () => {
-			login();
-		});
-		signUpButton.addEventListener('click', () => {
-			location.href = '/users';
-		});
+	loginButton.addEventListener('click', () => {
+		login();
 	});
-};
+	signUpButton.addEventListener('click', () => {
+		location.href = '/users';
+	});
+});
 
 const login = async () => {
 	const user_id = document.querySelector('#id').value;
@@ -37,5 +35,3 @@ const login = async () => {
 		location.href = '/error-500';
 	}
 };
-
-load();
